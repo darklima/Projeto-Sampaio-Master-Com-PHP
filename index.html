@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="/img/icone/favicon.ico" />
+  <title>Sampaio Tecnologia</title>
+</head>
+
+<body>
+  <!-- Modal -->
+  <div class="modal fade" id="modalCatavento" tabindex="-1" aria-labelledby="modalMuseuCatavento" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalMuseuCatavento">Museu Catavento</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="lead"> A iluminação do Museu Catavento destaca cada exposição e promove uma experiência visual
+            envolvente,
+            utilizando tecnologias avançadas e sistemas de iluminação LED de baixo consumo promove a sustentabilidade,
+            criando uma jornada cativante onde a luz e a ciência se encontram para inspirar e educar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalBovespa" tabindex="-1" aria-labelledby="modalBovespaTitulo" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalBovespaTitulo">Bovespa</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="lead"> Apresentamos o projeto de iluminação da BOVESPA, criando um ambiente moderno e profissional
+            que destaca a importância do mercado financeiro,
+            com TVs estrategicamente posicionadas para acompanhar as movimentações em tempo real, proporcionando uma
+            atmosfera inspiradora para negociações bem-sucedidas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- /Modal -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3 box-shadow">
+
+      <a href="#home" class="navbar-brand">
+        <img class="logo" src="./img/logo.png" alt="logo caravan">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir Navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item ">
+            <a class="nav-link" href="#servicos">Serviços</a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="#sobre">Sobre</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="btn btn-outline-primary ml-md-2" type="submit" href="#contatos">Contato</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+  <section id="home" class="container-fluid">
+    <div class="row bg-trabalho text-white">
+
+      <div class="col-lg-7 p-0">
+        <div id="carouselCidades" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselCidades" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselCidades" data-slide-to="1"></li>
+            <li data-target="#carouselCidades" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="img/catavento.jpg" alt="Museu catavento">
+              <div class="carousel-caption ">
+                <h3 class="display-4">Museu Catavento</h3>
+                <p class="lead element" data-toggle="modal" data-target="#modalCatavento">
+                  Clique aqui e saiba mais.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/bovespa.jpg" alt="B3">
+              <div class="carousel-caption">
+                <h3 class="display-4">BoveSPa</h3>
+                <p class="lead element" data-toggle="modal" data-target="#modalBovespa">
+                  Clique aqui e saiba mais.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/arte.png" alt="Banner, conectando inovação e eficiência">
+              <div class="carousel-caption">
+              </div>
+            </div>
+
+          </div>
+          <a class="carousel-control-prev" href="#carouselCidades" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselCidades" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-5 p-4 align-self-center">
+        <h1 class="display-4">Deixe seu contato</h1>
+        <p class="lead">um especialista entrará em contato para entender o que voce precisa.</p>
+
+        <form action="php/enviar.php" name="FormularioEnvia" method="POST">
+          <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html" />
+          <div class="form-group">
+            <label for="nome">Digite seu nome</label>
+            <input type="text" class="form-control" name="Nome" id="Nome" required>
+            <label for="email">Digite seu e-mail</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+          </div>
+
+          <div class="form-group">
+            <label for="areadetexto">Como podemos te ajudar?</label>
+            <textarea class="form-control" name="areadetexto" id="areadetexto" rows="3" required></textarea>
+          </div>
+          <button class="btn btn-primary" data-toggle="modal" data-target="#modalForm" type="submit">Enviar</button>
+      </div>
+      </form>
+    </div>
+
+    </div>
+  </section>
+
+  <section id="servicos" class="py-5 bg-light">
+    <div class="container text-center">
+      <div class="my-5">
+        <span class="h6 d-block "> ENTRE EM CONTATO </span>
+        <h2 class="display-4 text-primary">Nossas Soluções</h2>
+      </div>
+      <div class="row">
+
+        <div class="col-xl-4 col-md-6">
+          <div style="height: 100px;" class="d-flex justify-content-center">
+            <img src="./img/icone/Eletricista_Residencial.png" alt="Icone Elétrica residencial">
+          </div>
+          <h3>Elétrica predial e residencial</h3>
+          <p>Oferecemos serviços de elétrica predial e residencial com qualidade e confiabilidade para atender às
+            necessidades dos nossos clientes.
+          </p>
+        </div>
+
+        <div class="col-xl-4 col-md-6">
+          <div style="height: 100px;" class="d-flex justify-content-center">
+            <img src="./img/icone/industrial.png" alt="Icone eletrica industrial">
+          </div>
+          <h3> Elétrica industral</h3>
+          <p>Nossos serviços de elétrica são projetados para garantir eficiência e segurança em ambientes industriais,
+            atendendo às demandas específicas do setor com excelência.
+          </p>
+        </div>
+
+        <div class="col-xl-4 col-md-6">
+          <div style="height: 100px;" class="d-flex justify-content-center">
+            <img src="./img/icone/consultoria.png" alt="Icone Consultoria">
+          </div>
+          <h3>Consultoria</h3>
+          <p>Oferecemos serviços de consultoria, proporcionando soluções personalizadas e inovadoras para atender às
+            necessidades técnicas e estratégicas dos nossos clientes.
+          </p>
+        </div>
+      </div>
+      <a href="https://wa.link/2yke7z" target="_blank" class="btn btn-primary btn-lg mt-4">Entre em contato</a>
+    </div>
+  </section>
+
+  <section id="home-quote" class="p-md-5">
+    <blockquote class="blockquote text-center text-white p-md-5 p-3">
+      <p class="display-4"><em>
+          "Tudo é energia e isso é tudo que há para fazer. Combine a frequência da realidade que você deseja e você não
+          poderá deixar de entender essa realidade. Não pode ser de outra maneira. Isso não é filosofia. Isso é física."
+        </em></p>
+      <footer class="blockquote-footer text-white">Albert Einstein</footer>
+    </blockquote>
+  </section>
+
+  <section id="sobre">
+    <div class="container text-center ">
+      <div class="my-5">
+        <h2>Sobre</h2>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg">
+          <p class="lead">
+            A Sampaio Tecnologia, foi fundada em 2007, é uma empresa consolidada no mercado de serviços elétricos
+            prediais, residenciais e industriais. Com uma trajetória marcada pela excelência e inovação,
+            já prestou serviços de destaque na BOVESPA e no Museu Catavento. Nosso compromisso é oferecer soluções
+            tecnológicas de alta qualidade, garantindo segurança e eficiência em cada projeto. Contamos com uma equipe
+            especializada e dedicada,
+            pronta para atender às necessidades específicas de cada cliente. Na Sampaio Tecnologia, unimos expertise e
+            confiabilidade para superar as expectativas e proporcionar resultados excepcionais.
+          <p class="lead">
+            "Conectando inovação com eficiência, <strong>acendemos ideias que energizam. </strong>
+          <p class="lead">Sua visão, nossa missão: iluminar com excelência.</p> "
+          </p>
+
+          </p>
+        </div>
+
+        <div class="col">
+          <img src="./img/sobre.jpg" alt="lampadas">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contatos">
+    <div class="container-fluid text-center">
+
+      <div class="my-5">
+
+        <h2>Contatos</h2>
+
+      </div>
+
+      <div class="mb-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.851408919387!2d-46.68648802388678!3d-23.716999767330105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4f9dee8e831d%3A0xca27586ed7175c78!2sRua%20Anthero%20Gomes%20do%20Nascimento%2C%20190%20-%20Jardim%20Edilene%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004812-360!5e0!3m2!1spt-BR!2sbr!4v1711825502708!5m2!1spt-BR!2sbr"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="row">
+
+        <div class="col-md-4">
+          <h4 class="h6"> DADOS DE CONTATO</h4>
+          <ul class="list-unstyled text-secondary">
+            <li>sampaiotecnologia@sampaiotecnologia.com.br</li>
+            <li>(11) 5925-8509</li>
+            <li>De Seg. á Sex das 80hh ás 18h</li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h4 class="h6">Endereço</h4>
+          <ul class="list-unstyled text-secondary">
+            <li>Rua: Anthero Gomes do Nascimento, 190</li>
+            <li>CEP: 04812-360</li>
+
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h4 class="h6">Redes sociais</h4>
+          <ul class="list-unstyled text-secondary">
+            <li><a href="https://wa.link/7a26rw" target="_blank"> <img src="./img/icone/whatsapp.png"
+                  alt="icone whatsapp"></a>(11) 98386-0644 </li>
+
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <footer class=" text-white mt-5">
+    <div class="bg-trabalho text-center py-3">
+      <p class="mb-0">Sampaio Tecnologia c 2007 Alguns direitos reservados CNPJ 09.123.526/0001-33</p>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>
